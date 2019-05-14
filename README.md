@@ -2,4 +2,4 @@
 
 Simple Python Firefox Profile Manager
 
-![Overview](https://github.com/matenow/ItemManager/raw/master/screen.png)
+![Overview](https://raw.githubusercontent.com/sinhnn/ffpm/master/screen.png)
