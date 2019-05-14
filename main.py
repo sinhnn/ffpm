@@ -20,7 +20,7 @@ else:
     _ = lambda f: f
 
 
-IREFOX = 'C:\\Program Files\\Mozilla Firefox\\firefox.exe'
+_FIREFOX = 'C:\\Program Files\\Mozilla Firefox\\firefox.exe'
 _FIELDS = {
         "name" : "Profdile name",
         "path" : "Location of Profile",
