@@ -1,0 +1,148 @@
+# ItemManager - PL translation
+# Copyright (C) 2018 Mateusz Nowak
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-01-01 21:59+0100\n"
+"PO-Revision-Date: 2018-01-01 22:07+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.0.5\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"Language: pl\n"
+
+#: main.py:53 main.py:158 main.py:162 main.py:205
+msgid "Save"
+msgstr "Zapisz"
+
+#: main.py:55 main.py:128
+msgid "Add"
+msgstr "Dodaj"
+
+#: main.py:57 main.py:128
+msgid "Edit"
+msgstr "Edytuj"
+
+#: main.py:59 main.py:187
+msgid "Remove"
+msgstr "Usuń"
+
+#: main.py:61
+msgid "Find"
+msgstr "Znajdź"
+
+#: main.py:63
+msgid "Clear"
+msgstr "Wyczyść"
+
+#: main.py:81 main.py:131
+msgid "Index"
+msgstr "Indeks"
+
+#: main.py:82 main.py:132
+msgid "Description"
+msgstr "Opis"
+
+#: main.py:83 main.py:133
+msgid "Quantity"
+msgstr "Ilość"
+
+#: main.py:84 main.py:134
+msgid "Unit"
+msgstr "Jednostka"
+
+#: main.py:85 main.py:135
+msgid "Price"
+msgstr "Cena"
+
+#: main.py:86
+msgid "Total"
+msgstr "Razem"
+
+#: main.py:87 main.py:136
+msgid "Notes"
+msgstr "Notatki"
+
+#: main.py:106
+msgid ""
+"An error occurred when opening file:\n"
+"\n"
+msgstr ""
+"Wystąpił błąd podczas odczytu pliku:\n"
+"\n"
+
+#: main.py:106 main.py:208 main.py:215 main.py:217 main.py:224 main.py:226
+#: main.py:240
+msgid "Error"
+msgstr "Błąd"
+
+#: main.py:143
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: main.py:187
+msgid ""
+"Remove this item?\n"
+"\n"
+msgstr ""
+"Usunąć ten element?\n"
+"\n"
+
+#: main.py:205
+msgid "File saved successfully"
+msgstr "Plik zapisany pomyślnie"
+
+#: main.py:208
+msgid ""
+"An error occurred when saving file:\n"
+"\n"
+msgstr ""
+"Wystąpił błąd podczas zapisu pliku:\n"
+"\n"
+
+#: main.py:215 main.py:217 main.py:224
+msgid ""
+"An error occurred when editing item:\n"
+"\n"
+msgstr ""
+"Wystąpił błąd podczas edycji elementu:\n"
+"\n"
+
+#: main.py:215 main.py:224
+msgid "Empty or invalid value"
+msgstr "Wartość pusta lub nieprawidłowa"
+
+#: main.py:226
+msgid ""
+"An error occurred when adding item:\n"
+"\n"
+msgstr ""
+"Wystąpił błąd podczas dodawania elementu:\n"
+"\n"
+
+#: main.py:235
+msgid ""
+"It seems like you've started this program for the first time. Do you want to "
+"create a new database? All existing data will be overwritten."
+msgstr ""
+"Wygląda na to, że uruchomiono program po raz pierwszy. Czy utworzyć nową "
+"bazę danych? Wszystkie istniejące dane zostaną nadpisane."
+
+#: main.py:235
+msgid "Welcome"
+msgstr "Witamy"
+
+#: main.py:240
+msgid ""
+"An error occurred when creating file:\n"
+"\n"
+msgstr ""
+"Wystąpił błąd podczas tworzenia pliku:\n"
+"\n"
