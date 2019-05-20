@@ -83,7 +83,7 @@ class Application(Frame):
         button_add = Button(self, text=_('Add'), image=self.button_add_icon, compound='left', width=0,
                             command=lambda: self.add())
         button_run = Button(self, text=_('Run'), image=self.button_add_icon, compound='left', width=0,
-                            command=lambda: self.run())
+                            command=lambda: self.run_selection())
         button_edit = Button(self, text=_('Edit'), image=self.button_edit_icon, compound='left', width=0,
                              command=lambda: self.edit())
         button_remove = Button(self, text=_('Remove'), image=self.button_remove_icon, compound='left', width=0,
@@ -103,6 +103,7 @@ class Application(Frame):
         item_list.bind("<Escape>", self.clear_key)
         item_list.bind("<Control-l>", self.focus_find)
         item_list.bind("<Control-s>", self.save_key)
+        item_list.bind("<Control-a>", self.select_all_key)
         item_list.focus_force()
 
         entry_find = Entry(self)
@@ -111,7 +112,7 @@ class Application(Frame):
         entry_find.bind("<Escape>", self.clear_key)
 
         self.contextMenu = Menu(self, tearoff=0)
-        self.contextMenu.add_command(label="Run", command=self.run)
+        self.contextMenu.add_command(label="Run", command=self.run_selection)
         self.contextMenu.add_command(label="Edit", command=self.edit)
         self.contextMenu.add_command(label="Remove", command=self.remove)
 
@@ -253,7 +254,7 @@ class Application(Frame):
         else:
             pass
     def douleClick(self, event):
-        self.run()
+        self.run_selection()
     def entry_find_from_enter(self, event):
         self.find(entry_find.get())
         return
@@ -264,15 +265,20 @@ class Application(Frame):
     def focus_find(self, event):
         entry_find.focus()
 
+    def select_all_key(self, event):
+        item_list.selection_set(*item_list.get_children())
     # =========================================================================
-    def run(self):
-        try:
-            id = int(item_list.item(item_list.focus())['text']) - 1
-        except ValueError:
-            # edit_window.destroy()
-            return
+    def run(self, id):
         item = self.db.items[id]
         subprocess.Popen([_FIREFOX, "--no-remote", "--profile", item["path"], item["startup_page"]])
+
+    def run_selection(self):
+        try:
+            selected = item_list.selection()
+            for item in item_list.selection():
+                self.run(int(item_list.item(item, 'text'))  - 1)
+        except ValueError:
+            return
     
     def remove(self):
         id = self.get_focus_item()
